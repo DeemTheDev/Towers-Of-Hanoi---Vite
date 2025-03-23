@@ -1,15 +1,12 @@
 # 🎮 Towers of Hanoi 3D
 
-![License](https://img.shields.io/github/license/DeemTheDev/Towers-Of-Hanoi---Vite?style=for-the-badge)
 ![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
 ![Three.js](https://img.shields.io/badge/Three.js-black?style=for-the-badge&logo=three.js&logoColor=white)
 ![Vite](https://img.shields.io/badge/vite-%23646CFF.svg?style=for-the-badge&logo=vite&logoColor=white)
 
 An interactive 3D implementation of the classic Towers of Hanoi puzzle game built with Three.js and TypeScript.
 
-<p align="center">
-  <img src="screenshot.png" alt="Towers of Hanoi 3D Screenshot" width="700">
-</p>
+![alt screenshot](/public/image.png)
 
 ## ✨ Features
 
@@ -37,17 +34,17 @@ An interactive 3D implementation of the classic Towers of Hanoi puzzle game buil
 │   ├── Confetti.ts     # Confetti animation for celebrations
 │   ├── Disk.ts         # Disk object implementation
 │   ├── Tower.ts        # Tower object implementation
-│   ├── TowersOfHanoi.ts # Main game logic
+│   ├── TowersOfHanoi.ts # Main game logic with rules
 │   ├── types.d.ts      # TypeScript type definitions
 │   ├── main.ts         # Entry point
 │   └── style.css       # Global styles
 ├── index.html          # Main HTML file
 ├── package.json        # Dependencies and scripts
 ├── tsconfig.json       # TypeScript configuration
-└── vite.config.ts      # Vite configuration
+
 ```
 
-## 🎯 Why Vite + TypeScript?
+## 🎯 Why I Chose Vite + TypeScript?
 
 - **Fast Development**: Vite provides lightning-fast hot module replacement and quick build times
 - **Type Safety**: TypeScript helps catch errors early and provides better tooling
@@ -65,12 +62,14 @@ An interactive 3D implementation of the classic Towers of Hanoi puzzle game buil
 ### Installation
 
 1. Clone the repository:
+
 ```bash
 git clone https://github.com/DeemTheDev/Towers-Of-Hanoi---Vite.git
 cd Towers-Of-Hanoi---Vite
 ```
 
 2. Install dependencies:
+
 ```bash
 npm install
 # or
@@ -78,6 +77,7 @@ yarn
 ```
 
 3. Run the development server:
+
 ```bash
 npm run dev
 # or
@@ -85,19 +85,10 @@ yarn dev
 ```
 
 4. Open your browser and navigate to:
+
 ```
 http://localhost:5173
 ```
-
-### Building for Production
-
-```bash
-npm run build
-# or
-yarn build
-```
-
-The built files will be in the `dist` directory, ready to be deployed.
 
 ## 🎮 How to Play
 
@@ -110,26 +101,3 @@ The built files will be in the `dist` directory, ready to be deployed.
 7. Use the "Undo Move" button to revert a move if you make a mistake.
 8. Complete the puzzle to progress to the next level.
 9. Only scores from level 7 (maximum difficulty) are recorded on the leaderboard.
-
-## 📚 Educational Value
-
-The Towers of Hanoi puzzle is a classic mathematical problem that demonstrates:
-
-- Recursive problem-solving
-- Exponential complexity (optimal solution requires 2^n - 1 moves)
-- Binary number representation (each move corresponds to a bit flip)
-- Strategic thinking and planning
-
-## 🤝 Contributing
-
-Contributions are welcome! Please feel free to submit a Pull Request.
-
-## 📝 License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
-
-## 🙏 Acknowledgements
-
-- Three.js community for excellent documentation and examples
-- Vite team for creating an amazing build tool
-- [GPRM](https://gprm.itsvg.in) for the awesome README elements
