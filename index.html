@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Towers of Hanoi - Three.js</title>
+</head>
+
+<body>
+  <div id="app">
+    <div id="game-container"></div>
+    <div id="ui-container">
+      <div id="controls">
+        <label for="disk-slider">Number of Disks (3-7): </label>
+        <input type="range" id="disk-slider" min="3" max="7" value="3" step="1" />
+        <span id="disk-value">3</span>
+      </div>
+      <div id="info">
+        <p id="timer-label">Time: 00:00</p>
+        <p id="moves-label">0 of 7 moves</p>
+        <button id="undo-button" disabled class="disabled">Undo Move</button>
+        <button id="leaderboard-button">Leaderboard</button>
+        <button id="reset-button">Reset Game</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Leaderboard overlay -->
+  <div id="leaderboard-overlay" class="overlay hidden">
+    <div class="overlay-content">
+      <h2>Leaderboard - Level 7</h2>
+      <table id="leaderboard-table">
+        <thead>
+          <tr>
+            <th>Rank</th>
+            <th>Name</th>
+            <th>Time</th>
+            <th>Moves</th>
+            <th>Date</th>
+          </tr>
+        </thead>
+        <tbody id="leaderboard-body">
+          <!-- Leaderboard entries will be inserted here -->
+        </tbody>
+      </table>
+      <button id="close-leaderboard">Close</button>
+    </div>
+  </div>
+
+  <!-- Victory modal overlay -->
+  <div id="victory-modal" class="overlay hidden">
+    <div class="overlay-content victory-content">
+      <div class="confetti-wrapper">
+        <div class="confetti-piece"></div>
+        <div class="confetti-piece"></div>
+        <div class="confetti-piece"></div>
+        <div class="confetti-piece"></div>
+        <div class="confetti-piece"></div>
+        <div class="confetti-piece"></div>
+        <div class="confetti-piece"></div>
+        <div class="confetti-piece"></div>
+        <div class="confetti-piece"></div>
+        <div class="confetti-piece"></div>
+      </div>
+  
+      <h2 id="victory-title">Level Complete!</h2>
+  
+      <div class="completion-stats">
+        <div class="stat-item">
+          <div class="stat-icon">⏱️</div>
+          <div class="stat-label">Time</div>
+          <div id="victory-time" class="stat-value">00:00</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-icon">🔢</div>
+          <div class="stat-label">Moves</div>
+          <div id="victory-moves" class="stat-value">0</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-icon">🎮</div>
+          <div class="stat-label">Level</div>
+          <div id="victory-level" class="stat-value">3</div>
+        </div>
+      </div>
+  
+      <div id="victory-message" class="victory-message">
+        <!-- Dynamic message will be inserted here -->
+      </div>
+  
+      <div id="victory-buttons" class="button-group">
+        <button id="next-level-button" class="primary-button">Next Level</button>
+        <button id="replay-level-button" class="secondary-button">Replay Level</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- High score submission overlay -->
+  <div id="score-submission-overlay" class="overlay hidden">
+    <div class="overlay-content">
+      <h2>New High Score!</h2>
+      <p>You've achieved a new high score for Level 7!</p>
+      <div class="score-details">
+        <p>Time: <span id="submission-time"></span></p>
+        <p>Moves: <span id="submission-moves"></span></p>
+      </div>
+      <div class="form-group">
+        <label for="player-name">Enter your name:</label>
+        <input type="text" id="player-name" maxlength="20" placeholder="Your Name">
+      </div>
+      <div class="button-group">
+        <button id="submit-score">Submit</button>
+        <button id="cancel-submission">Cancel</button>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="/src/main.ts"></script>
+</body>
+
+</html>
